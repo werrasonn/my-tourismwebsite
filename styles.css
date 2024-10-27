@@ -1,0 +1,168 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+/* Background Image */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('wildlife-background.jpg') no-repeat center center/cover;
+    z-index: -1;
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.3); /* Transparent background */
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    z-index: 10;
+    
+}
+
+/* Logo in the Top Left Corner */
+.logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 80px;
+width: autopx;
+}
+
+/* Aligning Navigation Links to the Right */
+.nav-left {
+    margin-left: auto; /* Pushes .nav-left to the right side */
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation Links */
+.nav-left a {
+    color: #ff8c00; /* Bright orange for theme */
+    text-decoration: none;
+    margin-left: 20px; /* Adds spacing between links */
+    font-weight: bold;
+}
+
+/* Centered Search Bar */
+.search-bar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input {
+    padding: 8px;
+    border: none;
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+.card {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+card > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+.description p {
+    color: #b0b0ba;
+    padding-top: 5px;
+}
+.description h4 {
+    text-transform: uppercase;
+}
+/* Hide checkbox input */
+input[type="radio"] {
+    display: none;
+}
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+.card[for="c1"] {
+    background-image: url('safari.jpg');
+}
+.card[for="c2"] {
+    background-image: url('beach.jpeg');
+}
+.card[for="c3"] {
+    background-image: url('mountain.jpg');
+}
+.card[for="c4"] {
+    background-image: url('culture.jpg');
+}
+.card[for="c5"] {
+    background-image: url('city.jpg');
+}
+
